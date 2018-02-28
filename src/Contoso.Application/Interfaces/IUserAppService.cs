@@ -7,10 +7,10 @@ namespace Contoso.Application.Interfaces
 {
     public interface IUserAppService : IDisposable
     {
-        void Create(UserRequest user);
         IEnumerable<UserResponse> GetAll();
-        UserResponse GetById(long id);
+        UserResponse GetById(int id);
+        void Create(UserRequest user);
         void Update(UserRequest user);
-        void Remove(long id);
+        void Remove(int id);
     }
 }
